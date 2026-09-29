@@ -1,0 +1,119 @@
+{
+  "date": "2026-09-29",
+  "hardware": "RTX 5080 16GB",
+  "os": "Windows",
+  "torch": "2.10.0+cu128",
+  "transformers": "5.17.0",
+  "cpu_operator_cases_passed": 32,
+  "long_preprocessing_tensor_equal_to_historical": true,
+  "short_public_cli": {
+    "results": {
+      "stock": {
+        "prediction_index": 2,
+        "choice": "C",
+        "candidate_logits": [
+          20.574378967285156,
+          19.681663513183594,
+          21.687274932861328,
+          19.013925552368164
+        ],
+        "candidate_probabilities": [
+          0.21446610987186432,
+          0.08783291280269623,
+          0.6526544094085693,
+          0.04504663497209549
+        ],
+        "candidate_vocab_mass": 0.9993994235992432,
+        "forward_seconds": 0.4332651000004262,
+        "peak_allocated_GiB": 9.437492847442627,
+        "peak_reserved_GiB": 10.001953125,
+        "attention_stats": {}
+      },
+      "headsplit": {
+        "prediction_index": 2,
+        "choice": "C",
+        "candidate_logits": [
+          20.574378967285156,
+          19.681663513183594,
+          21.687274932861328,
+          19.013925552368164
+        ],
+        "candidate_probabilities": [
+          0.21446610987186432,
+          0.08783291280269623,
+          0.6526544094085693,
+          0.04504663497209549
+        ],
+        "candidate_vocab_mass": 0.9993994235992432,
+        "forward_seconds": 0.1937173999613151,
+        "peak_allocated_GiB": 9.428875923156738,
+        "peak_reserved_GiB": 10.005859375,
+        "attention_stats": {
+          "other_attention_calls": 584,
+          "text_partitioned_calls": 36,
+          "max_query_length": 428
+        }
+      }
+    },
+    "tokens": 428,
+    "thinker_parameters": 4703464448,
+    "training_updates": 0,
+    "generation_tokens": 0,
+    "timing_scope": "Forward only; excludes model loading, media preprocessing and input transfer",
+    "memory_scope": "PyTorch allocator peaks, not whole-card sampling",
+    "comparison": {
+      "full_vocab_exact": true,
+      "max_full_vocab_abs": 0.0,
+      "max_candidate_logit_abs": 0.0,
+      "max_candidate_probability_abs": 0.0,
+      "historical_operational_gate_passed": true
+    }
+  },
+  "long_public_cli": {
+    "results": {
+      "headsplit": {
+        "prediction_index": 1,
+        "choice": "yes",
+        "candidate_logits": [
+          20.693859100341797,
+          21.65534782409668
+        ],
+        "candidate_probabilities": [
+          0.27658024430274963,
+          0.7234197854995728
+        ],
+        "candidate_vocab_mass": 0.999077320098877,
+        "forward_seconds": 3.142700899974443,
+        "peak_allocated_GiB": 10.201777935028076,
+        "peak_reserved_GiB": 10.40625,
+        "attention_stats": {
+          "other_attention_calls": 11312,
+          "text_partitioned_calls": 36,
+          "max_query_length": 5521
+        }
+      }
+    },
+    "tokens": 5521,
+    "thinker_parameters": 4703464448,
+    "training_updates": 0,
+    "generation_tokens": 0,
+    "timing_scope": "Forward only; excludes model loading, media preprocessing and input transfer",
+    "memory_scope": "PyTorch allocator peaks, not whole-card sampling"
+  },
+  "long_candidate_logits_equal_to_historical": true,
+  "long_candidate_probabilities_equal_to_historical": true,
+  "note": "Public CLI checks: one short stock/headsplit pair and one longest historical input; no new benchmark or training.",
+  "source_sha256": {
+    "infer.py": "6891edbfb59cf4aa35acae6bdc9f51098ade777ed9fd41705c0bae0099f10420",
+    "omni_headsplit.py": "2ab4cc259a07a1aa738f7671528153f8f3f13394d193896dda2d3f74e5756736",
+    "prepare.py": "ea6d8211a53a49e4285d09f146169a96e2520577723609c79cf409a8c195062c",
+    "verify_evidence.py": "344c39c244a0b2c5cd08eae5d2682471ab7ebc918a8b45d220e7fbe9f9f54966"
+  },
+  "publication_line_endings": "Text normalized to LF; Python AST unchanged from smoke-tested source.",
+  "public_code_sha256": {
+    "infer.py": "6891edbfb59cf4aa35acae6bdc9f51098ade777ed9fd41705c0bae0099f10420",
+    "omni_headsplit.py": "2ab4cc259a07a1aa738f7671528153f8f3f13394d193896dda2d3f74e5756736",
+    "prepare.py": "ea6d8211a53a49e4285d09f146169a96e2520577723609c79cf409a8c195062c",
+    "verify_evidence.py": "344c39c244a0b2c5cd08eae5d2682471ab7ebc918a8b45d220e7fbe9f9f54966"
+  }
+}

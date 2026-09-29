@@ -1,0 +1,57 @@
+{
+  "status": "complete",
+  "predictions": 8,
+  "params": 4703464448,
+  "training_updates": 0,
+  "peak_allocated_GiB": 9.928215503692627,
+  "peak_reserved_GiB": 10.0078125,
+  "completed_utc": "2026-09-29T02:59:10.234905+00:00",
+  "initialization": "conversational_not_raw_Base",
+  "precision": "BF16 model and FP32 complete-vocabulary last-token readout",
+  "attention_counts": {
+    "other_attention_calls": 2584,
+    "text_attention_calls": 144,
+    "text_partitioned_calls": 144,
+    "max_query_length": 627
+  },
+  "comparisons": [
+    {
+      "index": 0,
+      "full_vocab_max_abs": 0.0,
+      "candidate_logit_max_abs": 0.0,
+      "candidate_probability_max_abs": 0.0,
+      "same_candidate_prediction": true,
+      "same_full_vocab_argmax": true,
+      "pass": true
+    },
+    {
+      "index": 67,
+      "full_vocab_max_abs": 0.0,
+      "candidate_logit_max_abs": 0.0,
+      "candidate_probability_max_abs": 0.0,
+      "same_candidate_prediction": true,
+      "same_full_vocab_argmax": true,
+      "pass": true
+    },
+    {
+      "index": 132,
+      "full_vocab_max_abs": 0.0,
+      "candidate_logit_max_abs": 0.0,
+      "candidate_probability_max_abs": 0.0,
+      "same_candidate_prediction": true,
+      "same_full_vocab_argmax": true,
+      "pass": true
+    },
+    {
+      "index": 255,
+      "full_vocab_max_abs": 0.0,
+      "candidate_logit_max_abs": 0.0,
+      "candidate_probability_max_abs": 0.0,
+      "same_candidate_prediction": true,
+      "same_full_vocab_argmax": true,
+      "pass": true
+    }
+  ],
+  "numerical_gate_passed": true,
+  "gate_scope": "Predeclared operational tolerance on four fixed short inputs; not bit-exact or long-input equivalence proof."
+}

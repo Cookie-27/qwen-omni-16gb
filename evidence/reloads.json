@@ -1,0 +1,102 @@
+[
+  {
+    "index": 104,
+    "row_index": 13,
+    "group_index": 3,
+    "mode": "real",
+    "order": "original",
+    "candidate_logits": [
+      20.693859100341797,
+      21.65534782409668
+    ],
+    "candidate_probs": [
+      0.27658024430274963,
+      0.7234197854995728
+    ],
+    "allowed_vocab_mass": 0.999077320098877,
+    "full_vocab_argmax": 33,
+    "prediction_display_index": 1,
+    "correct": false,
+    "forward_seconds": 2.7770304000005126
+  },
+  {
+    "index": 0,
+    "row_index": 0,
+    "group_index": 0,
+    "mode": "real",
+    "order": "original",
+    "candidate_logits": [
+      22.008485794067383,
+      20.383346557617188
+    ],
+    "candidate_probs": [
+      0.8355026841163635,
+      0.16449733078479767
+    ],
+    "allowed_vocab_mass": 0.9991306662559509,
+    "full_vocab_argmax": 32,
+    "prediction_display_index": 0,
+    "correct": true,
+    "forward_seconds": 2.84585020004306
+  },
+  {
+    "index": 67,
+    "row_index": 8,
+    "group_index": 2,
+    "mode": "silent",
+    "order": "reverse",
+    "candidate_logits": [
+      20.093374252319336,
+      22.292339324951172
+    ],
+    "candidate_probs": [
+      0.09984346479177475,
+      0.9001564979553223
+    ],
+    "allowed_vocab_mass": 0.9992926716804504,
+    "full_vocab_argmax": 33,
+    "prediction_display_index": 1,
+    "correct": true,
+    "forward_seconds": 2.53105410002172
+  },
+  {
+    "index": 132,
+    "row_index": 16,
+    "group_index": 4,
+    "mode": "gray",
+    "order": "original",
+    "candidate_logits": [
+      21.293041229248047,
+      21.00897789001465
+    ],
+    "candidate_probs": [
+      0.5705421566963196,
+      0.4294579029083252
+    ],
+    "allowed_vocab_mass": 0.9991230368614197,
+    "full_vocab_argmax": 32,
+    "prediction_display_index": 0,
+    "correct": false,
+    "forward_seconds": 2.1562343999976292
+  },
+  {
+    "index": 255,
+    "row_index": 31,
+    "group_index": 7,
+    "mode": "both",
+    "order": "reverse",
+    "candidate_logits": [
+      21.281349182128906,
+      20.87109375
+    ],
+    "candidate_probs": [
+      0.6011491417884827,
+      0.3988508880138397
+    ],
+    "allowed_vocab_mass": 0.998993456363678,
+    "full_vocab_argmax": 32,
+    "prediction_display_index": 0,
+    "correct": true,
+    "forward_seconds": 2.4818920000107028
+  }
+]

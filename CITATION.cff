@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If this reproducible artifact is useful, please cite the repository and its version; upstream work is credited in NOTICE.md."
+title: "Qwen Omni on 16GB"
+type: software
+authors:
+  - family-names: "Cookie-27"
+version: 0.1.0
+date-released: 2026-09-29
+url: "https://github.com/Cookie-27/qwen-omni-16gb"
+license: MIT

@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "path": "CPU_long_attention_checks.json",
+      "sha256": "708a837bd79be40639b67cc661f5d602eb0559928f16bced21d78c4857955283"
+    },
+    {
+      "path": "CPU_operator_checks.json",
+      "sha256": "85b81639a9abe157a30aa13589828af2bf221e3a504d443650c3340c07cdb859"
+    },
+    {
+      "path": "numerical_summary.json",
+      "sha256": "309d0320bfb4b1083639efe8a564617aa982b164e9a42e7a05223fa71674390e"
+    },
+    {
+      "path": "predictions.json",
+      "sha256": "d3672f77c8608ce66b5049912f783411685c9283f6dd697a6e2574a2b14f473f"
+    },
+    {
+      "path": "reloads.json",
+      "sha256": "786020544419eea28e2be94d33d0c5961849ce876a383021d0799f457649bb05"
+    },
+    {
+      "path": "runtime.json",
+      "sha256": "8bff078173ec168f94318c5df6a198118cd4986057813068d75c48a1e48330df"
+    },
+    {
+      "path": "vectors/headsplit_000.npy",
+      "sha256": "c5f1b2cbeb8eabcf01003175c2075a3265316439a730d19d0533eeceda2d5f4a"
+    },
+    {
+      "path": "vectors/headsplit_067.npy",
+      "sha256": "9f1a0f5c8fc8f3bc52d2bc2e150fe13ec72235ef45dc8aea56a1513c6ee24da7"
+    },
+    {
+      "path": "vectors/headsplit_132.npy",
+      "sha256": "4016595b6d52b027dc92f5dae4ef840bf9378773ed06f91351771189ef7402e3"
+    },
+    {
+      "path": "vectors/headsplit_255.npy",
+      "sha256": "2847cae92d196beff5d0b1759af25ec25aa9922e7ed3445b50a3a953ceb60c8c"
+    },
+    {
+      "path": "vectors/stock_000.npy",
+      "sha256": "c5f1b2cbeb8eabcf01003175c2075a3265316439a730d19d0533eeceda2d5f4a"
+    },
+    {
+      "path": "vectors/stock_067.npy",
+      "sha256": "9f1a0f5c8fc8f3bc52d2bc2e150fe13ec72235ef45dc8aea56a1513c6ee24da7"
+    },
+    {
+      "path": "vectors/stock_132.npy",
+      "sha256": "4016595b6d52b027dc92f5dae4ef840bf9378773ed06f91351771189ef7402e3"
+    },
+    {
+      "path": "vectors/stock_255.npy",
+      "sha256": "2847cae92d196beff5d0b1759af25ec25aa9922e7ed3445b50a3a953ceb60c8c"
+    }
+  ]
+}

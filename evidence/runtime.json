@@ -1,0 +1,34 @@
+{
+  "historical_date": "2026-09-29",
+  "model": "Qwen/Qwen2.5-Omni-3B",
+  "revision": "f75b40e3da2003cdd6e1829b1f420ca70797c34e",
+  "thinker_parameters": 4703464448,
+  "initialization": "conversational, not raw pretrained Base",
+  "gpu": "RTX 5080 16GB",
+  "torch": "2.10.0+cu128",
+  "transformers": "5.17.0",
+  "precision": "BF16 backbone/encoders with FP32 complete-vocabulary last-token head",
+  "min_tokens": 3446,
+  "max_tokens": 5521,
+  "full_audio_seconds_range": [
+    39.681,
+    60.004
+  ],
+  "frame_sampling": "all selected 1fps frames, not all original video frames",
+  "main_forwards": 256,
+  "all_forwards": 269,
+  "peak_allocated_GiB": 10.201777935028076,
+  "peak_whole_card_sampled_MiB": 12001,
+  "real_condition_median_forward_seconds": 2.4559,
+  "training_updates": 0,
+  "generated_tokens": 0,
+  "time_boundary": "Forward only; not end-to-end latency or a speedup comparison",
+  "equivalence_boundary": "Four short-input complete-vocabulary comparisons; longest stock input OOM, so no full-model long-input stock equivalence proof",
+  "quality_boundary": "32 exposed MUSIC training-source questions, two oracle-derived answer candidates, two orders, four modalities; not the original 42-class benchmark",
+  "historical_source_hashes": {
+    "main_results.json": "f56576f6c8f0ba8729e0755752c781e8ad9f4108e62682c72207d32c4cbc27f7",
+    "probe_results.json": "442621fb26f5411fcd5f7e5b3098d25ee71dbe535589797a1cccb12edf651122",
+    "reload_results.json": "a812762f7d4fe5837923123dccaa53e95f8c62b6085367d0774b7db14987a1b4",
+    "music_text_headsplit_sdpa.py": "4810aa778a4b49fc8ef0073bcb769dd595d72a0ccdb3a50e98c53013afc4c8a7"
+  }
+}

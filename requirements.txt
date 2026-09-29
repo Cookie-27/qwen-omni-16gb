@@ -1,0 +1,9 @@
+# Install the appropriate CUDA build of torch separately for inference.
+torch==2.10.0
+transformers==5.17.0
+accelerate>=1.0,<2
+numpy>=1.26,<3
+scipy>=1.11,<2
+Pillow>=10,<13
+soundfile>=0.12,<1
+librosa>=0.10,<1

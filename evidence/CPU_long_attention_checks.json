@@ -1,0 +1,48 @@
+{
+  "started_utc": "2026-09-29T02:56:53.972305+00:00",
+  "sequence_length": 5521,
+  "query_heads": 16,
+  "KV_heads": 2,
+  "head_dimension": 128,
+  "selected_rows": [
+    0,
+    1,
+    254,
+    255,
+    256,
+    257,
+    510,
+    511,
+    512,
+    513,
+    5374,
+    5375,
+    5376,
+    5377,
+    5519,
+    5520
+  ],
+  "backend": "CPU SDPBackend.MATH",
+  "scope": "Random actual-dimension full-length tensors, with independent FP64 attention at16boundary/end rows; not full-model/GPU equivalence.",
+  "cases": [
+    {
+      "dtype": "torch.float32",
+      "atol": 2e-06,
+      "rtol": 2e-05,
+      "max_absolute_error": 4.6137075163099617e-07,
+      "elements_checked": 32768,
+      "mismatched_elements": 0
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "atol": 0.002,
+      "rtol": 0.016,
+      "max_absolute_error": 0.007724791169494871,
+      "elements_checked": 32768,
+      "mismatched_elements": 0
+    }
+  ],
+  "status": "pass",
+  "CUDA_initialized": false,
+  "completed_utc": "2026-09-29T02:56:56.849574+00:00"
+}
