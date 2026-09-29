@@ -86,11 +86,11 @@ The official checkpoint revision is pinned. Use `--model /path/to/local/snapshot
 ## Numerical check on a short input
 
 ```bash
-python infer.py --inputs runs/short.pt --compare-stock --output runs/comparison.json
+python infer.py --inputs runs/demo-inputs.pt --compare-stock --output runs/comparison.json
 python -m unittest discover -s tests -v
 ```
 
-`--compare-stock` runs stock and partitioned SDPA in one process and reports complete-vocabulary exactness and predeclared tolerances. Use a short input that fits stock attention. Do not relax tolerances after a failing comparison. The historical four short vectors matched exactly; this does not prove equality on all hardware or long inputs.
+Use the prepared synthetic input from the preceding quickstart, or another short input that fits stock attention. `--compare-stock` runs stock and partitioned SDPA in one process and reports complete-vocabulary exactness and predeclared tolerances. Do not relax tolerances after a failing comparison. The historical four short vectors matched exactly; this does not prove equality on all hardware or long inputs.
 
 ## How the patch works
 
