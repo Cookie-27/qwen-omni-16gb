@@ -1,0 +1,23 @@
+name: Experiment or compatibility proposal
+description: Propose a controlled comparison or a bounded support change.
+title: "[Proposal] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and intended use
+      description: What useful question would this answer or which workflow would it enable?
+    validations:
+      required: true
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Proposed comparison and validation
+      description: State fixed inputs, runtime/model versions, measurement boundary and pass criteria. Explain any changed assumptions.
+    validations:
+      required: true
+  - type: textarea
+    id: help
+    attributes:
+      label: Available resources or contribution
+      description: CPU documentation contributions are welcome; hardware access is optional.

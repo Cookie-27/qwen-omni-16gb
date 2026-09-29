@@ -1,8 +1,10 @@
 # Qwen Omni on 16GB
 
+[![CPU verification](https://github.com/Cookie-27/qwen-omni-16gb/actions/workflows/verify.yml/badge.svg)](https://github.com/Cookie-27/qwen-omni-16gb/actions/workflows/verify.yml)
+
 [中文说明](README.zh-CN.md) · [Measured evidence](docs/evidence.md) · [Limitations](docs/limitations.md)
 
-A small, **inference-only** example for scoring answer candidates with **Qwen2.5-Omni-3B Thinker** on a 16GB RTX 5080.
+A small, **inference-only** example for developers scoring audio-and-frame answer candidates with **Qwen2.5-Omni-3B Thinker** on a 16GB RTX 5080.
 It partitions **text attention heads** into smaller SDPA calls while preserving each head's complete sequence and corresponding KV head.
 
 **Measured historical run:** full 39.7–60 second audio plus all selected 1fps frames, up to **5,521 input tokens**, **10.202 GiB peak allocated** and **12,001 MiB sampled whole-card usage**. Those values describe this workload, not every 16GB card or arbitrary video length.
@@ -18,6 +20,40 @@ python verify_evidence.py
 ```
 
 Python 3.11+ and its standard library are sufficient. The command checks evidence hashes, four complete-vocabulary vector pairs, 256 historical predictions and five repeated forwards. No model, media download, or network is needed.
+
+Expected output:
+
+```text
+Verified four byte-identical full-vocabulary vector pairs, 256 predictions and five repeated forwards.
+Historical counts / 64 contexts: {'real': 40, 'silent': 41, 'gray': 35, 'both': 32}
+32 development questions x two orders; chat initialization; zero training. Not a full benchmark.
+```
+
+## Start with a synthetic input
+
+Generate your first input with Python's standard library:
+
+```bash
+python make_demo.py
+```
+
+```text
+Created input spec: runs/demo/spec.json
+Media: 2.0 seconds of 16kHz mono audio; two 224x224 frames at 0s and 1s.
+Synthetic pipeline check only; no inference or accuracy evaluation performed.
+```
+
+This creates a steady tone, red/blue frames and a ready-to-use JSON spec. No media or model is downloaded. The output directory must be new; use `--output-dir runs/demo-2` for another copy.
+
+After installing a CUDA-compatible PyTorch 2.10.0 and the runtime requirements:
+
+```bash
+python -m pip install -r requirements.txt
+python prepare.py --spec runs/demo/spec.json --output runs/demo-inputs.pt
+python infer.py --inputs runs/demo-inputs.pt --compare-stock --output runs/demo-result.json
+```
+
+Preparation runs on CPU and downloads processor files when needed; inference requires the model weights and CUDA. The synthetic input checks the pipeline, not model accuracy. See the [walkthrough and troubleshooting](docs/quickstart.md) for output fields, requirements and interpretation.
 
 ## Run on your own audio and sampled frames
 
@@ -75,3 +111,4 @@ The historical run used Windows, PyTorch 2.10.0+cu128 and Transformers 5.17.0. C
 
 Companion study: [Small VLM Decision Lab](https://github.com/Cookie-27/small-vlm-decision-lab).
 Licensing and upstream attribution are in [NOTICE.md](NOTICE.md).
+See [upstream options and integration boundaries](docs/ecosystem.md), [contributing](CONTRIBUTING.md) and the [roadmap](docs/roadmap.md). Code is [MIT licensed](LICENSE).

@@ -1,0 +1,32 @@
+name: Reproduction or runtime problem
+description: Report a failing command, numerical discrepancy, or documentation problem.
+title: "[Reproduction] "
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and repository version
+      description: Include the exact command and commit or release tag.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS and Python; add PyTorch, Transformers, CUDA and GPU only if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual output
+      description: Paste the first failing output and numerical deltas, if any.
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Minimal input or reproduction steps
+      description: Prefer the bundled example or synthetic inputs. Do not upload private media, tokens or model weights.
+    validations:
+      required: true
